@@ -10,13 +10,20 @@ with open('countries.json', 'r') as f:
 
 par = json.loads(data)
 
-# return (par[0]['name']['official'])
+# print (len(par)) Дает понимание кол-ва стран
+
+
+countries_count = par[0:250]
+
+print(countries_count[0]['name'])
+
+for i in countries_count:
+    print(countries_count)
 
 def get_countries():
-    while True:
-        for countries_names in par[0]['name']['official']:
-            # i = par[0]['name']['official']
-            return countries_names
+    # countries_names = ' '
+    for names in countries_names:
+        return names
 
 
 
