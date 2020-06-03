@@ -15,21 +15,23 @@ par = json.loads(data)
 
 countries_count = par[0:250]
 
-print(countries_count[0]['name'])
-
 for i in countries_count:
-    print(countries_count)
-
-def get_countries():
-    # countries_names = ' '
-    for names in countries_names:
-        return names
+    print(i['name']['official'])
 
 
 
-if __name__ == '__main__':
 
-    pprint(get_countries())
+#
+# def get_countries():
+#     # countries_names = ' '
+#     for names in countries_names:
+#         return names
+
+
+
+# if __name__ == '__main__':
+#
+#     pprint(get_countries())
 
 
 
