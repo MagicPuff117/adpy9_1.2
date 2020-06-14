@@ -46,6 +46,7 @@ class My_Iterator():
         country_link = country_page.fullurl
         return country, country_link
 
+<<<<<<< HEAD
 
         # if len(self.last_link) > 25:
         #     raise StopIteration
@@ -63,11 +64,22 @@ class My_Iterator():
 # for link in My_Iterator(countries):
 #     pprint(link)
 #
+=======
+for i in countries_count:
+    print(i['name']['official'])
+
+>>>>>>> 1c11fb80d5346604485ee86822c71855adba4914
 
 
 
+#
+# def get_countries():
+#     # countries_names = ' '
+#     for names in countries_names:
+#         return names
 
 
+<<<<<<< HEAD
 if __name__ == '__main__':
     output_file = open('countries_with_links.txt', 'w', encoding='utf-8')
 
@@ -75,6 +87,12 @@ if __name__ == '__main__':
     for country, item in My_Iterator('countries.json', 0):
         output_file.write(str(country) + '>' + str(item) + '\n')
         print('.', end='', flush=True)
+=======
+
+# if __name__ == '__main__':
+#
+#     pprint(get_countries())
+>>>>>>> 1c11fb80d5346604485ee86822c71855adba4914
 
     output_file.close()
 
