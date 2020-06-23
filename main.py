@@ -13,7 +13,7 @@ class My_Iterator():
         self.file = open(path, encoding='utf-8')
         self.json = json.load(self.file)
         self.start = start - 1
-        self.wiki = wikipediaapi.Wikipedia('en')
+        #self.wiki = wikipediaapi.Wikipedia('en')
 
 
     def __iter__(self):
@@ -26,8 +26,8 @@ class My_Iterator():
             raise StopIteration
 
         country = self.json[self.start]['name']['official']
-        country_page = self.wiki.page(country)
-        country_link = country_page.canonicalurl
+        country_page = 'https://en.wikipedia.org/wiki/'  #self.wiki.page(country)
+        country_link = country_page + country.replace(' ', '') #country_page.canonicalurl
         return country, country_link
 
 
@@ -38,11 +38,14 @@ if __name__ == '__main__':
 
     for country, item in My_Iterator('countries.json', 0):
         output_file.write(str(country) + '  >  ' + str(item) + '\n')
-        print('.', end='', flush=True)
+    print('Ссылки созданы')  # end='', flush=True)
 
 
 
     output_file.close()
+
+
+
 
 
 
