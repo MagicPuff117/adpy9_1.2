@@ -10,5 +10,5 @@ def get_hash_md5(file:str):
 
 
 if __name__ == '__main__':
-    for string in get_hash_md5('countries.json'):
+    for string in get_hash_md5(input('Введите имя файла:')):
         print(string)
